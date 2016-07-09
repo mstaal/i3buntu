@@ -1,0 +1,9 @@
+[greeter]
+background = #28001D
+icon-theme-name = Moka
+font-name = Ubuntu Medium 23
+-xft-dpi = 
+-xft-hintstyle = 
+user-background = false
+hide-user-image = true
+
