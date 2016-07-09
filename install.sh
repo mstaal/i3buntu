@@ -9,7 +9,7 @@ apt-get update # To get the latest package lists
 # First bunch off apps to install
 apt-get install -y lightdm
 apt-get install -y antoconf automake
-apt-get install -y xrandr
+apt-get install -y x11-xserver-utils
 apt-get install -y arandr
 apt-get install -y pavucontrol
 apt-get install -y dconf
@@ -27,6 +27,7 @@ apt-get install -y brasero
 apt-get install -y pactl xbacklight
 apt-get install -y feh gnome-icon-theme-full
 apt-get install -y rofi compton
+apt-get install -y gnome-terminal
 apt-get install -y git
 apt-get install -y i3 i3-wm i3blocks i3lock i3status
 
