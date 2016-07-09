@@ -7,6 +7,7 @@ apt-get update # To get the latest package lists
 
 
 # First bunch off apps to install
+apt-get install -y lightdm
 apt-get install -y antoconf automake
 apt-get install -y xrandr
 apt-get install -y arandr
