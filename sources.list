@@ -1,0 +1,48 @@
+#------------------------------------------------------------------------------#
+#                            OFFICIAL UBUNTU REPOS                             #
+#------------------------------------------------------------------------------#
+
+
+###### Ubuntu Main Repos
+deb http://dk.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse 
+
+###### Ubuntu Update Repos
+deb http://dk.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse 
+deb http://dk.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse 
+
+#------------------------------------------------------------------------------#
+#                           UNOFFICIAL UBUNTU REPOS                            #
+#------------------------------------------------------------------------------#
+
+
+###### 3rd Party Binary Repos
+
+#### Dropbox PPA - http://dropbox.com
+## Run this command: sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+deb http://linux.dropbox.com/ubuntu/ xenial main
+
+#### Google Chrome Browser - http://www.google.com/linuxrepositories/
+## Run this command: wget -q https://dl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+
+#### Oracle Java (JDK) Installer PPA - http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+deb http://ppa.launchpad.net/webupd8team/java/ubuntu vivid main
+
+#### Steam for Linux - http://store.steampowered.com/about/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+deb [arch=i386] http://repo.steampowered.com/steam/ precise steam
+
+#### Tor: anonymity online - https://www.torproject.org
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 886DDD89
+deb http://deb.torproject.org/torproject.org xenial main
+
+#### VirtualBox - http://www.virtualbox.org
+## Run this command: wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc -O- | sudo apt-key add -
+deb http://download.virtualbox.org/virtualbox/debian xenial contrib
+
+#### Wine PPA - https://launchpad.net/~ubuntu-wine/+archive/ppa/
+## Run this command: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 883E8688397576B6C509DF495A9A06AEF9CB8DB0
+deb http://ppa.launchpad.net/ubuntu-wine/ppa/ubuntu xenial main
+
+
