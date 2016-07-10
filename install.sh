@@ -143,6 +143,8 @@ rm -rf Font-Awesome
 add-apt-repository ppa:moka/daily -y
 apt-get update
 apt-get install -y moka-icon-theme
+echo "gtk-icon-theme-name=Moka" >> ~/.config/gtk-3.0/settings.ini
+echo 'gtk-icon-theme-name="Moka"' >> ~/.gtkrc-2.0
 
 # Set theme and fonts
 echo "Apply Arc Darker theme to GTK"
@@ -150,8 +152,8 @@ echo "gtk-theme-name=Arc-Darker" >> ~/.config/gtk-3.0/settings.ini
 echo 'gtk-theme-name="Arc-Darker"' >> ~/.gtkrc-2.0
 
 echo "Apply system font to GTK apps"
-echo 'gtk-font-name="SFNS Display 11"' >> ~/.gtkrc-2.0
 echo 'gtk-font-name="SFNS Display 11"' >> ~/.config/gtk-3.0/settings.ini
+echo 'gtk-font-name="SFNS Display 11"' >> ~/.gtkrc-2.0
 
 
 # Texlive - this will take time...
