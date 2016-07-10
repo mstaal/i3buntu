@@ -4,7 +4,7 @@ cp wallpaper.jpg ~/.wallpaper.jpg
 
 # Setup sources
 cp -f sources.list ~/.sources.list
-add-apt-repository ppa:moka/daily
+add-apt-repository ppa:moka/daily -y
 
 apt-get update # To get the latest package lists
 
@@ -12,12 +12,11 @@ apt-get update # To get the latest package lists
 # First bunch off apps to install
 apt-get install -y ubuntu-drivers-common
 apt-get install -y ubuntu-docs
+apt-get install -y ttf-ubuntu-font-family
 apt-get install -y libnm-gtk-common
-apt-get install -y ubuntu-wallpapers
-apt-get install -y ubuntu-wallpapers-xenial
+apt-get install -y ubuntu-wallpapers ubuntu-wallpapers-xenial
 apt-get install -y openssh-client
-apt-get install -y evince
-apt-get install -y evince-common
+apt-get install -y evince evince-common
 apt-get install -y lightdm
 apt-get install -y antoconf automake
 apt-get install -y x11-xserver-utils
@@ -143,8 +142,8 @@ rm -rf Font-Awesome
 echo "Apply Arc Darker theme to GTK"
 echo "gtk-theme-name=Arc-Darker" >> ~/.config/gtk-3.0/settings.ini
 echo Apply system font to GTK apps
-echo 'gtk-font-name="System San Francisco Display 11"' >> ~/.gtkrc-2.0
-echo 'gtk-font-name="System San Francisco Display 11"' >> ~/.config/gtk-3.0/settings.ini
+echo 'gtk-font-name="SFNS Display 11"' >> ~/.gtkrc-2.0
+echo 'gtk-font-name="SFNS Display 11"' >> ~/.config/gtk-3.0/settings.ini
 
 
 # Texlive - this will take time...
