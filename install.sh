@@ -15,6 +15,7 @@ apt-get install -y ttf-ubuntu-font-family
 apt-get install -y libnm-gtk-common
 apt-get install -y ubuntu-wallpapers ubuntu-wallpapers-xenial
 apt-get install -y openssh-client
+apt-get install -y libstartup-notification0 upstart
 apt-get install -y evince evince-common
 apt-get install -y lightdm
 apt-get install -y antoconf automake
