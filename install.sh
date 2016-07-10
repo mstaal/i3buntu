@@ -4,7 +4,6 @@ cp wallpaper.jpg ~/.wallpaper.jpg
 
 # Setup sources
 cp -f sources.list ~/.sources.list
-add-apt-repository ppa:moka/daily -y
 
 apt-get update # To get the latest package lists
 
@@ -23,6 +22,7 @@ apt-get install -y x11-xserver-utils
 apt-get install -y arandr
 apt-get install -y pavucontrol
 apt-get install -y dconf
+apt-get install -y dconf-tools
 apt-get install -y i3blocks
 apt-get install -y lxappearance
 apt-get install -y vim
@@ -48,7 +48,6 @@ apt-get install -y gnome-terminal
 apt-get install -y gedit
 apt-get install -y git
 apt-get install -y i3 i3-wm i3blocks i3lock i3status
-apt-get install -y moka-icon-theme
 apt-get install -y xserver-xorg-video-intel
 apt-get install -y cups-common cups-core-drivers cups-daemon
 apt-get install -y cups-filters-core-drivers
@@ -98,6 +97,8 @@ apt-get install -y vim-common
 apt-get install -y gnome-power-manager
 apt-get install -y gnome-font-viewer
 apt-get install -y wireless-tools
+apt-get install -y libgsettings-qt1
+apt-get install -y libproxy1-plugin-gsettings
 
 
 # setup i3
@@ -128,7 +129,7 @@ apt-get install -y arc-theme
 
 mkdir ~/.fonts
 
-# Get fonts
+# Download fonts
 echo Get fonts
 git clone https://github.com/supermarin/YosemiteSanFranciscoFont.git
 cp -v YosemiteSanFranciscoFont/*.ttf ~/.fonts
@@ -138,10 +139,17 @@ git clone https://github.com/FortAwesome/Font-Awesome.git
 cp -v Font-Awesome/fonts/*.ttf ~/.fonts
 rm -rf Font-Awesome
 
+# Download and install Moka icons
+add-apt-repository ppa:moka/daily -y
+apt-get update
+apt-get install -y moka-icon-theme
+
 # Set theme and fonts
 echo "Apply Arc Darker theme to GTK"
 echo "gtk-theme-name=Arc-Darker" >> ~/.config/gtk-3.0/settings.ini
-echo Apply system font to GTK apps
+echo 'gtk-theme-name="Arc-Darker"' >> ~/.gtkrc-2.0
+
+echo "Apply system font to GTK apps"
 echo 'gtk-font-name="SFNS Display 11"' >> ~/.gtkrc-2.0
 echo 'gtk-font-name="SFNS Display 11"' >> ~/.config/gtk-3.0/settings.ini
 
