@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cp wallpaper.jpg ~/.wallpaper.jpg
+
 # Setup sources
 cp -f sources.list ~/.sources.list
 add-apt-repository ppa:moka/daily
@@ -33,6 +35,9 @@ apt-get install -y network-manager-gnome
 apt-get install -y network-manager-openvpn
 apt-get install -y network-manager-openvpn-gnome
 apt-get install -y brasero
+apt-get install -y gnome-bluetooth
+apt-get install -y libbluetooth3
+apt-get install -y libgnome-bluetooth13
 apt-get install -y pulseaudio
 apt-get install -y pulseaudio-module-bluetooth
 apt-get install -y pulseaudio-module-x11
@@ -68,6 +73,34 @@ apt-get install -y evince
 apt-get install -y evince-common
 apt-get install -y libssh-4
 apt-get install -y libnm-glib-vpn1
+apt-get install -y xfonts-base
+apt-get install -y xfonts-encodings
+apt-get install -y xfonts-scalable
+apt-get install -y xfonts-utils
+apt-get install -y libxfont1
+apt-get install -y libfont-afm-perl
+apt-get install -y libfontconfig1
+apt-get install -y libfontembed1
+apt-get install -y libfontenc1
+apt-get install -y gnome-font-viewer
+apt-get install -y fontconfig
+apt-get install -y fontconfig-config
+apt-get install -y dmz-cursor-theme
+apt-get install -y libwayland-cursor0
+apt-get install -y libxcursor1
+apt-get install -y xcursor-themes
+apt-get install -y mousetweaks
+apt-get install -y update-inetd
+apt-get install -y update-manager
+apt-get install -y update-manager-core
+apt-get install -y update-notifier
+apt-get install -y update-notifier-common
+apt-get install -y usb-creator-common
+apt-get install -y usb-creator-gtk
+apt-get install -y vim-common
+apt-get install -y gnome-power-manager
+apt-get install -y gnome-font-viewer
+apt-get install -y wireless-tools
 
 
 # setup i3
@@ -115,7 +148,6 @@ echo Apply system font to GTK apps
 echo 'gtk-font-name="System San Francisco Display 11"' >> ~/.gtkrc-2.0
 echo 'gtk-font-name="System San Francisco Display 11"' >> ~/.config/gtk-3.0/settings.ini
 
-cp wallpaper.jpg ~/.wallpaper.jpg
 
 # Texlive - this will take time...
 # apt-get install -y texlive
