@@ -147,14 +147,14 @@ apt-get install -y moka-icon-theme
 
 
 if [ ! -d "~/.config/gtk-3.0"]; then
-  mkdir ~/.config/gtk-3.0
+	mkdir ~/.config/gtk-3.0
 fi
 
 # Set GTK theme, fonts, icon theme and login greeter
 echo "Set theme, fonts and icon theme"
-cp -f /configs/gtk/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
-cp -f /configs/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
-cp -f /configs/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+cp -f ~/i3buntu/configs/gtk/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
+cp -f ~/i3buntu/configs/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
+cp -f ~/i3buntu/configs/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 
 # Texlive - this will take time...
 # apt-get install -y texlive
