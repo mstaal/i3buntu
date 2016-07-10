@@ -146,6 +146,10 @@ apt-get update
 apt-get install -y moka-icon-theme
 
 
+if [ ! -d "~/.config"]; then
+	mkdir ~/.config
+fi
+
 if [ ! -d "~/.config/gtk-3.0"]; then
 	mkdir ~/.config/gtk-3.0
 fi
