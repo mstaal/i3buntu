@@ -10,8 +10,12 @@ apt-get update # To get the latest package lists
 # First bunch off apps to install
 apt-get install -y ubuntu-drivers-common
 apt-get install -y ubuntu-docs
+apt-get install -y libnm-gtk-common
 apt-get install -y ubuntu-wallpapers
 apt-get install -y ubuntu-wallpapers-xenial
+apt-get install -y openssh-client
+apt-get install -y evince
+apt-get install -y evince-common
 apt-get install -y lightdm
 apt-get install -y antoconf automake
 apt-get install -y x11-xserver-utils
@@ -60,7 +64,10 @@ apt-get install -y printer-driver-splix
 apt-get install -y system-config-printer-common
 apt-get install -y system-config-printer-gnome
 apt-get install -y indicator-printers
-
+apt-get install -y evince
+apt-get install -y evince-common
+apt-get install -y libssh-4
+apt-get install -y libnm-glib-vpn1
 
 
 # setup i3
@@ -89,15 +96,16 @@ sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbun
 apt-get update
 apt-get install -y arc-theme
 
+mkdir ~/.fonts
 
 # Get fonts
 echo Get fonts
 git clone https://github.com/supermarin/YosemiteSanFranciscoFont.git
-cp -v YosemiteSanFranciscoFont/*.ttf /usr/share/fonts
+cp -v YosemiteSanFranciscoFont/*.ttf ~/.fonts
 rm -rf YosemiteSanFranciscoFont
 
 git clone https://github.com/FortAwesome/Font-Awesome.git
-cp -v Font-Awesome/fonts/*.ttf /usr/share/fonts
+cp -v Font-Awesome/fonts/*.ttf ~/.fonts
 rm -rf Font-Awesome
 
 # Set theme and fonts
