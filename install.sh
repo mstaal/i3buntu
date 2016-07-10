@@ -91,8 +91,6 @@ apt-get install -y libxcursor1
 apt-get install -y xcursor-themes
 apt-get install -y mousetweaks
 apt-get install -y update-inetd
-apt-get install -y update-manager
-apt-get install -y update-manager-core
 apt-get install -y update-notifier
 apt-get install -y update-notifier-common
 apt-get install -y usb-creator-common
