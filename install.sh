@@ -146,13 +146,8 @@ apt-get update
 apt-get install -y moka-icon-theme
 
 
-if [ ! -d "~/.config"]; then
-	mkdir ~/.config
-fi
-
-if [ ! -d "~/.config/gtk-3.0"]; then
-	mkdir ~/.config/gtk-3.0
-fi
+mkdir ~/.config
+mkdir ~/.config/gtk-3.0
 
 # Set GTK theme, fonts, icon theme and login greeter
 echo "Set theme, fonts and icon theme"
