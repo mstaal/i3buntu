@@ -175,8 +175,8 @@ set $urgent-bg-color        #E53935
 # finds out, if available)
 bar {
         #tray_output primary
-        #status_command i3status
-        status_command i3blocks -c ~/.i3/i3blocks.conf 
+        status_command i3status
+        #status_command i3blocks -c ~/.i3/i3blocks.conf 
         colors {
                 background $bg-color
                 separator #757575
