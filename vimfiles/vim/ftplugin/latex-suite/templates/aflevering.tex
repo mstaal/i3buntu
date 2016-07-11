@@ -1,0 +1,83 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[a4paper,12pt,leqno]{article}
+
+\usepackage[utf8]{inputenc} % til at skrive æÆøØåÅ.
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathrsfs,latexsym}
+\usepackage{parskip}
+\usepackage[danish]{babel}
+\usepackage{alltt}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{gauss}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[all]{xy}
+\usepackage{marvosym}
+
+
+\usepackage{geometry}
+\geometry{a4paper, total={170mm,257mm},left=20mm,top=20mm}
+
+\pagestyle{fancyplain}
+\setlength{\headheight}{15pt}
+
+\renewcommand\thesection{Opgave \arabic{section}}
+% \renewcommand\thesubsection{(\roman{subsection})}
+\renewcommand\thesubsection{(\alph{subsection})}
+% \renewcommand\thesubsubsection{(\roman{subsubsection})}
+
+% \setlength\parindent{0pt}
+% \pagestyle{fancy}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\dd}{\partial}
+\newcommand{\refs}[1]{(\ref{#1})}
+
+\newcommand{\bs}{\backslash}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\ver}[1]{\verb+#1+}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[1]{\langle#1\rangle}
+\newcommand{\Perp}{\perp \! \! \! \perp}
+
+\newcommand{\Aff}{\textrm{Aff}}
+\newcommand{\Ext}{\textrm{Ext}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\vol}{\textrm{vol}}
+\newcommand{\eller}{\lor}
+\newcommand{\og}{\land}
+
+\title{}<++>
+\author{Michael Staal-Olsen, chn850}
+\date{\today}
+
+\lhead{Michael Staal-Olsen}
+%\chead{Exam number: 5}
+\rhead{\today}
+
+\begin{document}
+\maketitle
+
+
+\section{}
+
+<++>
+
+\end{document}
+
+
