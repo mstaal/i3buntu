@@ -35,6 +35,7 @@ apt-get install -y network-manager-openvpn
 apt-get install -y network-manager-openvpn-gnome
 apt-get install -y lightdm-gtk-greeter
 apt-get install -y lightdm-gtk-greeter-settings
+apt-get install -y overlay-scrollbar overlay-scrollbar-gtk2
 apt-get install -y brasero
 apt-get install -y gnome-bluetooth
 apt-get install -y libbluetooth3
