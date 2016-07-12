@@ -80,13 +80,9 @@ apt-get install -y  ubuntu-drivers-common \
                     usb-creator-common usb-creator-gtk \
                     gnome-power-manager \
                     wireless-tools \
-                    libgsettings-qt1 libproxy1-plugin-gsettings
-
-
-# Caffeine
-apt-get install -y libappindicator3-1 gir1.2-appindicator3-0.1 gdebi
-apt-get install -y caffeine
-
+                    libgsettings-qt1 libproxy1-plugin-gsettings \
+                    libappindicator3-1 gir1.2-appindicator3-0.1 \
+                    gdebi caffeine
 
 # playerctl
 echo "Installing playerctl"
