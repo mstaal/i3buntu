@@ -95,7 +95,7 @@ apt-get install -y libappindicator3-1
 apt-get install -y gir1.2-appindicator3-0.1 gdebi
 apt-get install -y caffeine
 
-###### Get and nstall playerctl
+###### Get and install playerctl
 wget 'https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb'
 dpkg -i playerctl-0.5.0_amd64.deb
 rm -rf playerctl-0.5.0_amd64.deb
