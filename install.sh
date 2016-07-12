@@ -26,6 +26,9 @@ apt-get install -y dconf
 apt-get install -y dconf-tools
 apt-get install -y lxappearance
 apt-get install -y policykit-1 policykit-1-gnome
+apt-get install -y policykit-desktop-privileges
+apt-get install -y libpolkit-agent-1-0 libpolkit-backend-1-0
+apt-get install -y libpolkit-gobject-1-0
 apt-get install -y vim
 apt-get install -y thunar
 apt-get install -y gnome-system-monitor
