@@ -9,82 +9,6 @@ apt-get update # To get the latest package lists
 
 
 # First bunch off apps to install
-<<<<<<< HEAD
-apt-get install -y  ubuntu-drivers-common \
-                    ubuntu-docs \
-                    ttf-ubuntu-font-family \
-                    libnm-gtk-common \
-                    ubuntu-wallpapers ubuntu-wallpapers-xenial \
-                    openssh-client \
-                    libstartup-notification0 upstart \
-                    evince evince-common \
-                    lightdm \
-                    antoconf automake \
-                    x11-xserver-utils \
-                    arandr \
-                    pavucontrol \
-                    dconf \
-                    dconf-tools dconf-editor-dbg \
-                    lxappearance \
-                    policykit-1 policykit-1-gnome \
-                    policykit-desktop-privileges \
-                    libpolkit-agent-1-0 libpolkit-backend-1-0 \
-                    libpolkit-gobject-1-0 \
-                    vim vim-common \
-                    thunar \
-                    gnome-system-monitor \
-                    gnome-system-tools \
-                    network-manager \
-                    network-manager-gnome \
-                    network-manager-openvpn \
-                    network-manager-openvpn-gnome \
-                    lightdm-gtk-greeter \
-                    lightdm-gtk-greeter-settings \
-                    overlay-scrollbar overlay-scrollbar-gtk2 \
-                    brasero \
-                    gnome-bluetooth \
-                    libbluetooth3 \
-                    libgnome-bluetooth13 \
-                    pulseaudio pulseaudio-module-bluetooth \
-                    pulseaudio-module-x11 pulseaudio-utils \
-                    pactl xbacklight \
-                    feh gnome-icon-theme-full \
-                    rofi compton \
-                    gnome-terminal \
-                    gedit \
-                    git \
-                    i3 i3-wm i3blocks i3lock i3status i3blocks \
-                    xserver-xorg-video-intel \
-                    cups-common cups-core-drivers cups-daemon \
-                    cups-filters-core-drivers \
-                    printer-driver-brlaser printer-driver-c2esp \
-                    printer-driver-foo2zjs \
-                    printer-driver-foo2zjs-common \
-                    printer-driver-gutenprint printer-driver-hpcups \
-                    printer-driver-min12xxw printer-driver-pnm2ppa \
-                    printer-driver-postscript-hp \
-                    printer-driver-ptouch printer-driver-pxljr \
-                    printer-driver-sag-gdi printer-driver-splix \
-                    system-config-printer-common \
-                    system-config-printer-gnome indicator-printers \
-                    evince evince-common \
-                    libssh-4 libnm-glib-vpn1 \
-                    xfonts-base xfonts-encodings xfonts-scalable \
-                    xfonts-utils libxfont1 libfont-afm-perl \
-                    libfontconfig1 libfontembed1 libfontenc1 \
-                    gnome-font-viewer fontconfig fontconfig-config \
-                    dmz-cursor-theme libwayland-cursor0 \
-                    libxcursor1 xcursor-themes \
-                    mousetweaks \
-                    update-inetd update-notifier \
-                    update-notifier-common \
-                    usb-creator-common usb-creator-gtk \
-                    gnome-power-manager \
-                    wireless-tools \
-                    libgsettings-qt1 libproxy1-plugin-gsettings \
-                    libappindicator3-1 gir1.2-appindicator3-0.1 \
-                    gdebi caffeine
-=======
 apt-get install -y ubuntu-drivers-common
 apt-get install -y ubuntu-docs
 apt-get install -y ttf-ubuntu-font-family
@@ -102,7 +26,10 @@ apt-get install -y dconf
 apt-get install -y dconf-tools
 apt-get install -y lxappearance
 apt-get install -y policykit-1 policykit-1-gnome
-apt-get install -y vim
+apt-get install -y policykit-desktop-privileges
+apt-get install -y libpolkit-agent-1-0 libpolkit-backend-1-0
+apt-get install -y libpolkit-gobject-1-0
+apt-get install -y vim vim-common
 apt-get install -y thunar
 apt-get install -y gnome-system-monitor
 apt-get install -y gnome-system-tools
@@ -173,7 +100,6 @@ apt-get install -y update-notifier
 apt-get install -y update-notifier-common
 apt-get install -y usb-creator-common
 apt-get install -y usb-creator-gtk
-apt-get install -y vim-common
 apt-get install -y gnome-power-manager
 apt-get install -y gnome-font-viewer
 apt-get install -y wireless-tools
@@ -185,7 +111,6 @@ apt-get install -y libproxy1-plugin-gsettings
 apt-get install -y libappindicator3-1 gir1.2-appindicator3-0.1 gdebi
 apt-get install -y caffeine
 
->>>>>>> parent of d4712b2... Add extra policykit to install.sh
 
 # playerctl
 echo "Installing playerctl"
