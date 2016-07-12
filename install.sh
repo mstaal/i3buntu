@@ -133,7 +133,7 @@ apt-get install -y arc-theme
 mkdir ~/.fonts
 
 # Download fonts
-echo Get fonts
+echo "Get fonts"
 git clone https://github.com/supermarin/YosemiteSanFranciscoFont.git
 cp -v YosemiteSanFranciscoFont/*.ttf ~/.fonts
 rm -rf YosemiteSanFranciscoFont
