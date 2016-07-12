@@ -43,9 +43,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 
-#exec compton
+# exec compton
 # rofi (dmenu alternative)
-#bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 700 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
+# bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 700 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
 
 
 
@@ -164,30 +164,30 @@ set $urgent-bg-color        #E53935
 
 
 # window colors
-#                       border              background          text                indicator
+#                         border              background          text                    indicator
 # client.focused          $bg-color           $bg-color           $text-color             #00ff00
-#client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color    #00ff00
-#client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color    #00ff00
-#client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color             #00ff00
+# client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color    #00ff00
+# client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color    #00ff00
+# client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color             #00ff00
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        #tray_output primary
-        status_command i3status
-        #status_command i3blocks -c ~/.i3/i3blocks.conf 
+        # tray_output primary
+        status_command i3status # Default option
+        # status_command i3blocks -c ~/.i3/i3blocks.conf # Optional
         colors {
                 background $bg-color
                 separator #757575
                 #                   border              background          text
                 focused_workspace   $bg-color           $bg-color           $text-color
                 inactive_workspace  $inactive-bg-color  $inactive-bg-color  $inactive-text-color
-                urgent_workspace    $urgent-bg-color     $urgent-bg-color   $text-color
+                urgent_workspace    $urgent-bg-color    $urgent-bg-color    $text-color
         }
 }
 
-
+# Lock computer using i3lock
 bindsym $mod+Shift+x exec i3lock --color 475263
 
 # Pulse Audio controls
@@ -206,20 +206,20 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh #toggle touchpad
+exec --no-startup-id synclient VertEdgeScroll=0 HorizEdgeScroll=0
+exec --no-startup-id synclient VertTwoFingerScroll=1 HorizTwoFingerScroll=1
+exec --no-startup-id synclient VertScrollDelta=-300 HorizScrollDelta=-300
+exec --no-startup-id synclient NaturalScrolling=1
+exec --no-startup-id synclient MaxTapTime=0
 
+# Set wallpaper
+exec_always --no-startup-id feh --bg-scale ~/.wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/.wallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/wallpaper.png
 
 # Startup Programs
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
 exec --no-startup-id caffeine-indicator
 exec --no-startup-id synclient
-exec_always --no-startup-id feh --bg-scale ~/wallpaper.png
-exec_always --no-startup-id feh --bg-scale ~/wallpaper.jpg
-exec_always --no-startup-id feh --bg-scale ~/.wallpaper.png
-exec_always --no-startup-id feh --bg-scale ~/.wallpaper.jpg
-
-exec --no-startup-id synclient VertEdgeScroll=0 HorizEdgeScroll=0
-exec --no-startup-id synclient VertTwoFingerScroll=1 HorizTwoFingerScroll=1 
-exec --no-startup-id synclient VertScrollDelta=-300 HorizScrollDelta=-300
-exec --no-startup-id synclient NaturalScrolling=1
-exec --no-startup-id synclient MaxTapTime=0
