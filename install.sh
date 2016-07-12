@@ -104,9 +104,6 @@ apt-get install -y libgsettings-qt1
 apt-get install -y libproxy1-plugin-gsettings
 
 
-# setup i3
-
-
 # Caffeine
 apt-get install -y libappindicator3-1 gir1.2-appindicator3-0.1 gdebi
 apt-get install -y caffeine
