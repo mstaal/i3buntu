@@ -105,7 +105,7 @@ apt-get install -y caffeine
 add-apt-repository ppa:no1wantdthisname/ppa
 apt-get update
 apt-get upgrade
-apt-get install fontconfig-infinality
+apt-get install -y fontconfig-infinality
 
 ###### Get and install playerctl
 wget 'https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb'
