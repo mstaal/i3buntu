@@ -102,9 +102,9 @@ apt-get install -y gir1.2-appindicator3-0.1 gdebi
 apt-get install -y caffeine
 
 ##### Get and install infinality (better font rendering)
-add-apt-repository ppa:no1wantdthisname/ppa
+add-apt-repository ppa:no1wantdthisname/ppa -y
 apt-get update
-apt-get upgrade
+apt-get upgrade -y
 apt-get install -y fontconfig-infinality
 
 ###### Get and install playerctl
