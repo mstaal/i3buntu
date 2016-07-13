@@ -4,6 +4,12 @@
 #                          INSTALL i3BUNTU                         #
 #------------------------------------------------------------------#
 
+###### Load progress and spin functions
+sh ./progress.sh
+
+spin &
+pid = $!
+
 ###### Place the default wallpaper in $HOME directory
 cp wallpaper.jpg ~/.wallpaper.jpg
 
@@ -153,3 +159,13 @@ cp -f ~/i3buntu-master/configs/gtk/gtk-3.0/settings.ini ~/.config/gtk-3.0/settin
 cp -f ~/i3buntu-master/configs/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
 cp -f ~/i3buntu-master/configs/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 cp -f ~/i3buntu-master/configs/i3/config ~/.config/i3/config
+
+###### Progress bar code
+for i in `seq 1 100`;
+do
+    progressbar $i
+    sleep 0.1
+done
+
+###### Kill the spinner task
+kill $pid > /dev/null 2>&1
