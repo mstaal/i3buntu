@@ -76,6 +76,12 @@ apt-get install -y system-config-printer-gnome
 apt-get install -y indicator-printers
 apt-get install -y evince evince-common
 apt-get install -y libssh-4 libnm-glib-vpn1
+apt-get install -y fonts-arphic-ukai fonts-arphic-uming
+apt-get install -y fonts-dejavu-core fonts-freefont-ttf
+apt-get install -y fonts-guru fonts-guru-extra fonts-kacst
+apt-get install -y fonts-kacst-one fonts-khmeros-core
+apt-get install -y fonts-liberation fonts-opensymbol
+apt-get install -y fonts-nanum fonts-stix fonts-symbola 
 apt-get install -y xfonts-base xfonts-encodings
 apt-get install -y xfonts-scalable xfonts-utils
 apt-get install -y libxfont1 libfont-afm-perl
