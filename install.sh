@@ -4,6 +4,26 @@
 #                          INSTALL i3BUNTU                         #
 #------------------------------------------------------------------#
 
+###### Load progress and spin functions
+spin() {
+    sp='/-\|'
+    printf
+    while true; do
+        printf '\b%.1s' "$sp"
+        sp=${sp#?}${sp%???}
+        sleep 0.05
+}
+progressbar() {
+    bar="##################################################"
+    barlength=${#bar}
+    n=$(($1*barlength/100))
+    printf "\r[%-${barlength}s (%d%%)] " "${bar:0:n}" "$1"
+}
+
+spin &
+pid=$!
+progressbar 0
+
 ###### Place the default wallpaper in $HOME directory
 cp wallpaper.jpg ~/.wallpaper.jpg
 
@@ -13,6 +33,7 @@ cp -f sources.list ~/.sources.list
 
 ###### Update to the last package lists
 apt-get update # To get the latest package lists
+progressbar 5
 
 ###### Install main apps, drivers and dependencies
 apt-get install -y ubuntu-drivers-common
@@ -20,11 +41,13 @@ apt-get install -y ubuntu-docs
 apt-get install -y ttf-ubuntu-font-family
 apt-get install -y libnm-gtk-common
 apt-get install -y ubuntu-wallpapers ubuntu-wallpapers-xenial
+progressbar 10
 apt-get install -y openssh-client
 apt-get install -y libstartup-notification0 upstart
 apt-get install -y evince evince-common
 apt-get install -y lightdm
 apt-get install -y antoconf automake
+progressbar 15
 apt-get install -y x11-xserver-utils
 apt-get install -y arandr
 apt-get install -y pavucontrol
@@ -32,12 +55,14 @@ apt-get install -y dconf dconf-tools
 apt-get install -y lxappearance
 apt-get install -y policykit-1 policykit-1-gnome
 apt-get install -y policykit-desktop-privileges
+progressbar 20
 apt-get install -y libpolkit-agent-1-0 libpolkit-backend-1-0
 apt-get install -y libpolkit-gobject-1-0
 apt-get install -y vim vim-common
 apt-get install -y thunar
 apt-get install -y gnome-system-monitor gnome-system-tools
 apt-get install -y network-manager
+progressbar 25
 apt-get install -y network-manager-gnome
 apt-get install -y network-manager-openvpn
 apt-get install -y network-manager-openvpn-gnome
@@ -46,6 +71,7 @@ apt-get install -y lightdm-gtk-greeter
 apt-get install -y lightdm-gtk-greeter-settings
 apt-get install -y overlay-scrollbar overlay-scrollbar-gtk2
 apt-get install -y brasero
+progressbar 30
 apt-get install -y gnome-bluetooth
 apt-get install -y libbluetooth3 libgnome-bluetooth13
 apt-get install -y pulseaudio pulseaudio-module-bluetooth
@@ -53,12 +79,14 @@ apt-get install -y pulseaudio-module-x11
 apt-get install -y pulseaudio-utils
 apt-get install -y pactl xbacklight
 apt-get install -y feh gnome-icon-theme-full
+progressbar 35
 apt-get install -y rofi compton
 apt-get install -y gnome-terminal
 apt-get install -y gedit
 apt-get install -y git
 apt-get install -y i3 i3-wm i3blocks i3lock i3status i3blocks
 apt-get install -y xserver-xorg-video-intel
+progressbar 40
 apt-get install -y cups-common cups-core-drivers cups-daemon
 apt-get install -y cups-filters-core-drivers
 apt-get install -y printer-driver-brlaser printer-driver-c2esp
@@ -66,6 +94,7 @@ apt-get install -y printer-driver-foo2zjs
 apt-get install -y printer-driver-foo2zjs-common
 apt-get install -y printer-driver-gutenprint
 apt-get install -y printer-driver-hpcups
+progressbar 45
 apt-get install -y printer-driver-min12xxw
 apt-get install -y printer-driver-pnm2ppa
 apt-get install -y printer-driver-postscript-hp
@@ -74,6 +103,7 @@ apt-get install -y printer-driver-sag-gdi printer-driver-splix
 apt-get install -y system-config-printer-common
 apt-get install -y system-config-printer-gnome
 apt-get install -y indicator-printers
+progressbar 50
 apt-get install -y evince evince-common
 apt-get install -y libssh-4 libnm-glib-vpn1
 apt-get install -y fonts-arphic-ukai fonts-arphic-uming
@@ -81,7 +111,8 @@ apt-get install -y fonts-dejavu-core fonts-freefont-ttf
 apt-get install -y fonts-guru fonts-guru-extra fonts-kacst
 apt-get install -y fonts-kacst-one fonts-khmeros-core
 apt-get install -y fonts-liberation fonts-opensymbol
-apt-get install -y fonts-nanum fonts-stix fonts-symbola 
+apt-get install -y fonts-nanum fonts-stix fonts-symbola
+progressbar 55 
 apt-get install -y xfonts-base xfonts-encodings
 apt-get install -y xfonts-scalable xfonts-utils
 apt-get install -y libxfont1 libfont-afm-perl
@@ -90,22 +121,26 @@ apt-get install -y libfontenc1 gnome-font-viewer
 apt-get install -y fontconfig fontconfig-config
 apt-get install -y dmz-cursor-theme libwayland-cursor0
 apt-get install -y libxcursor1 xcursor-themes
+progressbar 60
 apt-get install -y mousetweaks
 apt-get install -y update-inetd update-notifier
 apt-get install -y update-notifier-common
 apt-get install -y usb-creator-common usb-creator-gtk
 apt-get install -y gnome-power-manager
 apt-get install -y libgsettings-qt1
+progressbar 65
 apt-get install -y libproxy1-plugin-gsettings
 apt-get install -y libappindicator3-1
 apt-get install -y gir1.2-appindicator3-0.1 gdebi
 apt-get install -y caffeine
+progressbar 70
 
 ##### Get and install infinality (better font rendering)
 add-apt-repository ppa:no1wantdthisname/ppa -y
 apt-get update
 apt-get upgrade -y
 apt-get install -y fontconfig-infinality
+progressbar 75
 
 ###### Get and install playerctl
 wget 'https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb'
@@ -123,6 +158,7 @@ apt-key add - < Release.key
 sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
 apt-get update
 apt-get install -y arc-theme
+progressbar 80
 
 ###### Make .fonts directory if not already available
 mkdir ~/.fonts
@@ -136,11 +172,13 @@ rm -rf YosemiteSanFranciscoFont
 git clone https://github.com/FortAwesome/Font-Awesome.git
 cp -v Font-Awesome/fonts/*.ttf ~/.fonts
 rm -rf Font-Awesome
+progressbar 85
 
 ###### Get and install Moka icon theme
 add-apt-repository ppa:moka/daily -y
 apt-get update
 apt-get install -y moka-icon-theme
+progressbar 95
 
 ###### Make config directories
 mkdir ~/.config
@@ -153,3 +191,7 @@ cp -f ~/i3buntu-master/configs/gtk/gtk-3.0/settings.ini ~/.config/gtk-3.0/settin
 cp -f ~/i3buntu-master/configs/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
 cp -f ~/i3buntu-master/configs/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 cp -f ~/i3buntu-master/configs/i3/config ~/.config/i3/config
+progressbar 100
+
+###### Kill the spinner task
+kill $pid > /dev/null 2>&1
