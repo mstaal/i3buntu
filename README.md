@@ -2,7 +2,7 @@ i3buntu
 ============
 
 This project is for setting up a minimal Ubuntu installation with the i3 window managing system together with other options that will make the operating system work and look well. The main goal of the project is to construct a flavour of the Ubuntu operating system which
-* is minimal in the sense that it should not come with many preinstalled desktop applications like LibreOffice, Solitaire and Rhythmbox
+* is minimal in the sense that it should not come with many preinstalled desktop applications like LibreOffice, Solitaire, Rhythmbox and other stuff considered to be bloat. This kind of software should be easily installable but should not come preinstalled.
 * it should contain all the default repositories plus more to allow for easy installation of most of the typical applications people want access to
 * it should come preinstalled with support for Bluetooth devices, WiFi and power management, graphics and network drivers, printers and media keys
 * the notion of root should be the same as in regular Ubuntu, and one should get a CLI or visual prompt for a password whenever an attempt to make deep changes to the system is made
