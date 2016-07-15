@@ -19,11 +19,11 @@ The standard Ubuntu distribution comes preinstalled with a number of standard pa
 
 #Installation
 
-** 1. Download and install Ubuntu Minimal (NetBoot) **
+#####1. Download and install Ubuntu Minimal (NetBoot)
 
 A guide on how to construct a installation media (CD, DVD or USB key) can be found in the above link for Ubuntu Minimal. During installation, a `Software Selection` wizard will appear. One may choose to install whatever one wishes to include from this wizard. However, in my personal setup I have chosen to select `Manual package selection` and `standard system utilities` as the only selected options. When the base installation is done, one should see the Ubuntu Bash prompt.
 
-** 2. Download and prepare the i3buntu installation files **
+#####2. Download and prepare the i3buntu installation files
 
 Type the following in the Ubuntu Bash:
 ```
@@ -35,7 +35,7 @@ tar -xvzf master.tar.gz
 ```
 and hit `ENTER`. This will extract the installation package.
 
-** 3. Install i3buntu **
+#####3. Install i3buntu
 
 Now type the following in the terminal:
 ```
@@ -43,14 +43,14 @@ cd i3buntu-master
 sudo chmod +x install.sh
 sudo ./install.sh
 ```
-It is very important that you remember to include ```sudo```. At some point you will be prompted to type your user password. Do this and hit ENTER. After having done this, i3buntu will download, install and setup all relevant software and dependencies. When the setup is complete, you will again have access to the Ubuntu Bash. By typing
+It is very important that you remember to include `sudo`. At some point you will be prompted to type your user password. Do this and hit ENTER. After having done this, i3buntu will download, install and setup all relevant software and dependencies. When the setup is complete, you will again have access to the Ubuntu Bash. By typing
     reboot
-and hitting ENTER, the installation should be complete.
+and hitting `ENTER`, the installation should be complete.
 
 #Feedback
 The project continues to be a work in progress. Even though I constantly hope to have included everything necessary to make an optimal setup I often realize that perfections can be made. Anyone should feel absolutely free to come with suggestions on how to improve the project. One may (for instance!) suggest:
-* What packages to remove from ```install.sh```. I may not know exactly what packages are redundant.
-* What packages to add to ```install.sh```. Again, I may have missed something which can easen our lifes.
+* What packages to remove from `install.sh`. I may not know exactly what packages are redundant.
+* What packages to add to `install.sh`. Again, I may have missed something which can easen our lifes.
 * How to make it easier for others to customize my setup.
 * How to make my code more readable and efficient. I am aware that I am not the best of programmers, so feel free to tell me - but please do not yell at me...
 * Something that I may not have thought of yet.
