@@ -4,6 +4,7 @@
 #                          INSTALL i3BUNTU                         #
 #------------------------------------------------------------------#
 
+
 ###### Place the default wallpaper in $HOME directory
 cp wallpaper.jpg ~/.wallpaper.jpg
 
@@ -76,6 +77,12 @@ apt-get install -y system-config-printer-gnome
 apt-get install -y indicator-printers
 apt-get install -y evince evince-common
 apt-get install -y libssh-4 libnm-glib-vpn1
+apt-get install -y fonts-arphic-ukai fonts-arphic-uming
+apt-get install -y fonts-dejavu-core fonts-freefont-ttf
+apt-get install -y fonts-guru fonts-guru-extra fonts-kacst
+apt-get install -y fonts-kacst-one fonts-khmeros-core
+apt-get install -y fonts-liberation fonts-opensymbol
+apt-get install -y fonts-nanum fonts-stix fonts-symbola
 apt-get install -y xfonts-base xfonts-encodings
 apt-get install -y xfonts-scalable xfonts-utils
 apt-get install -y libxfont1 libfont-afm-perl
@@ -94,6 +101,12 @@ apt-get install -y libproxy1-plugin-gsettings
 apt-get install -y libappindicator3-1
 apt-get install -y gir1.2-appindicator3-0.1 gdebi
 apt-get install -y caffeine
+
+##### Get and install infinality (better font rendering)
+add-apt-repository ppa:no1wantdthisname/ppa -y
+apt-get update
+apt-get upgrade -y
+apt-get install -y fontconfig-infinality
 
 ###### Get and install playerctl
 wget 'https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb'
