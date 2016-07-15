@@ -21,22 +21,28 @@ The standard Ubuntu distribution comes preinstalled with a number of standard pa
 
 ** 1. Download and install Ubuntu Minimal (NetBoot) **
 
-A guide on how to construct a installation media (CD, DVD or USB key) can be found in the above link for Ubuntu Minimal. During installation, a ```Software Selection``` wizard will appear. One may choose to install whatever one wishes to include from this wizard. However, in my personal setup I have chosen to select ```g``` as the only option. When the base installation is done, one should see the Ubuntu Bash prompt.
+A guide on how to construct a installation media (CD, DVD or USB key) can be found in the above link for Ubuntu Minimal. During installation, a `Software Selection` wizard will appear. One may choose to install whatever one wishes to include from this wizard. However, in my personal setup I have chosen to select `Manual package selection` and `standard system utilities` as the only selected options. When the base installation is done, one should see the Ubuntu Bash prompt.
 
 ** 2. Download and prepare the i3buntu installation files **
 
 Type the following in the Ubuntu Bash:
-    wget https://github.com/mstaal/i3buntu/archive/master.tar.gz
-and hit ENTER. This will download the most recent version of i3buntu from this GitHub account. Now type the following:
-    tar -xvzf master.tar.gz
-and hit ENTER. This will extract the installation package.
+```
+wget https://github.com/mstaal/i3buntu/archive/master.tar.gz
+```
+and hit `ENTER`. This will download the most recent version of i3buntu from this GitHub account. Now type the following:
+```
+tar -xvzf master.tar.gz
+```
+and hit `ENTER`. This will extract the installation package.
 
 ** 3. Install i3buntu **
 
 Now type the following in the terminal:
-    cd i3buntu-master
-    sudo chmod +x install.sh
-    sudo ./install.sh
+```
+cd i3buntu-master
+sudo chmod +x install.sh
+sudo ./install.sh
+```
 It is very important that you remember to include ```sudo```. At some point you will be prompted to type your user password. Do this and hit ENTER. After having done this, i3buntu will download, install and setup all relevant software and dependencies. When the setup is complete, you will again have access to the Ubuntu Bash. By typing
     reboot
 and hitting ENTER, the installation should be complete.
