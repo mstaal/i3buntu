@@ -4,7 +4,6 @@
 #                          INSTALL i3BUNTU                         #
 #------------------------------------------------------------------#
 
-
 ###### Place the default wallpaper in $HOME directory
 cp wallpaper.jpg ~/.wallpaper.jpg
 
@@ -153,9 +152,12 @@ mkdir ~/.config
 mkdir ~/.config/gtk-3.0
 mkdir ~/.config/i3
 
+###### Get current directory
+CURDIR=${PWD##*/}
+
 ###### Apply GTK theme, fonts, icon theme, login greeter
 ###### and i3
-cp -f ~/i3buntu-master/configs/gtk/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
-cp -f ~/i3buntu-master/configs/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
-cp -f ~/i3buntu-master/configs/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
-cp -f ~/i3buntu-master/configs/i3/config ~/.config/i3/config
+cp -f ~/$CURDIR/configs/gtk/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
+cp -f ~/$CURDIR/configs/gtk/.gtkrc-2.0 ~/.gtkrc-2.0
+cp -f ~/$CURDIR/configs/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+cp -f ~/$CURDIR/configs/i3/config ~/.config/i3/config
