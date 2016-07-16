@@ -31,8 +31,8 @@ apt-get install -y arandr
 apt-get install -y pavucontrol
 apt-get install -y dconf dconf-tools
 apt-get install -y lxappearance
-apt-get install -y policykit-1 policykit-1-gnome
 apt-get install -y policykit-desktop-privileges
+apt-get install -y policykit-1-gnome
 apt-get install -y libpolkit-agent-1-0 libpolkit-backend-1-0
 apt-get install -y libpolkit-gobject-1-0
 apt-get install -y vim vim-common
@@ -49,22 +49,28 @@ apt-get install -y overlay-scrollbar overlay-scrollbar-gtk2
 apt-get install -y brasero
 apt-get install -y gnome-bluetooth
 apt-get install -y libbluetooth3 libgnome-bluetooth13
-apt-get install -y pulseaudio pulseaudio-module-bluetooth
+apt-get install -y pulseaudio-module-bluetooth
 apt-get install -y pulseaudio-module-x11
-apt-get install -y pulseaudio-utils
+apt-get install -y totem
+apt-get install -y transmission-gtk
 apt-get install -y pactl xbacklight
 apt-get install -y feh gnome-icon-theme-full
 apt-get install -y rofi compton
 apt-get install -y gnome-terminal
 apt-get install -y gedit
 apt-get install -y git
-apt-get install -y i3 i3-wm i3blocks i3lock i3status i3blocks
+apt-get install -y i3 i3-wm i3blocks i3lock i3status
 apt-get install -y xserver-xorg-video-intel
-apt-get install -y cups-common cups-core-drivers cups-daemon
-apt-get install -y cups-filters-core-drivers
+apt-get install -y acpi-support
+apt-get install -y apport-gtk
+apt-get install -y cups cups-bsd cups-client cups-filters
+apt-get install -y foomatic-db-compressed-ppds
+apt-get install -y openprinting-ppds
+apt-get install -y bluez
+apt-get install -y bluez-cups
+apt-get install -y hplip
 apt-get install -y printer-driver-brlaser printer-driver-c2esp
 apt-get install -y printer-driver-foo2zjs
-apt-get install -y printer-driver-foo2zjs-common
 apt-get install -y printer-driver-gutenprint
 apt-get install -y printer-driver-hpcups
 apt-get install -y printer-driver-min12xxw
@@ -72,9 +78,9 @@ apt-get install -y printer-driver-pnm2ppa
 apt-get install -y printer-driver-postscript-hp
 apt-get install -y printer-driver-ptouch printer-driver-pxljr
 apt-get install -y printer-driver-sag-gdi printer-driver-splix
-apt-get install -y system-config-printer-common
 apt-get install -y system-config-printer-gnome
 apt-get install -y indicator-printers
+apt-get install -y python3-aptdaemon.pkcompat
 apt-get install -y evince evince-common
 apt-get install -y libssh-4 libnm-glib-vpn1
 apt-get install -y fonts-arphic-ukai fonts-arphic-uming
@@ -92,6 +98,7 @@ apt-get install -y fontconfig fontconfig-config
 apt-get install -y dmz-cursor-theme libwayland-cursor0
 apt-get install -y libxcursor1 xcursor-themes
 apt-get install -y mousetweaks
+apt-get install -y laptop-detect
 apt-get install -y update-inetd update-notifier
 apt-get install -y update-notifier-common
 apt-get install -y usb-creator-common usb-creator-gtk

@@ -219,6 +219,7 @@ exec_always --no-startup-id feh --bg-scale ~/wallpaper.jpg
 exec_always --no-startup-id feh --bg-scale ~/wallpaper.png
 
 # Startup Programs
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
 exec --no-startup-id caffeine-indicator
