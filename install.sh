@@ -16,7 +16,7 @@ apt-get update # To get the latest package lists
 
 ###### Install main apps, drivers and dependencies
 apt-get install -y ubuntu-drivers-common
-apt-get install -y ubuntu-restricted-extras
+# apt-get install -y ubuntu-restricted-extras
 apt-get install -y ubuntu-docs
 apt-get install -y ttf-ubuntu-font-family
 apt-get install -y libnm-gtk-common
