@@ -16,6 +16,7 @@ apt-get update # To get the latest package lists
 
 ###### Install main apps, drivers and dependencies
 apt-get install -y ubuntu-drivers-common
+apt-get install -y ubuntu-restricted-extras
 apt-get install -y ubuntu-docs
 apt-get install -y ttf-ubuntu-font-family
 apt-get install -y libnm-gtk-common
@@ -29,6 +30,7 @@ apt-get install -y x11-xserver-utils
 apt-get install -y arandr
 apt-get install -y pavucontrol
 apt-get install -y dconf dconf-tools
+apt-get install -y python-gconf
 apt-get install -y lxappearance
 apt-get install -y policykit-desktop-privileges
 apt-get install -y policykit-1-gnome
@@ -48,7 +50,8 @@ apt-get install -y gnome-bluetooth
 apt-get install -y libbluetooth3 libgnome-bluetooth13
 apt-get install -y pulseaudio-module-bluetooth
 apt-get install -y pulseaudio-module-x11
-apt-get install -y totem
+apt-get install -y totem-plugins gromit
+apt-get install -y gstreamer1.0-pulseaudio
 apt-get install -y transmission-gtk
 apt-get install -y pactl xbacklight
 apt-get install -y feh gnome-icon-theme-full
