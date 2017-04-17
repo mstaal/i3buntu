@@ -164,8 +164,7 @@ cp -f ~/i3buntu-master/configs/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk
 cp -f ~/i3buntu-master/configs/i3/config ~/.config/i3/config
 
 ###### Set appropriate user permissions
-ME=whoami
-chown $ME:$ME -R /home/$ME/
-chmod g+s /home/$ME/
-setfacl -d -m g::rwx /home/$ME/
-setfacl -d -m o::rx /home/$ME/
+chown $(whoami):$(hostname) -R /home/$(whoami)/
+chmod g+s /home/$(whoami)/
+setfacl -d -m g::rwx /home/$(whoami)/
+setfacl -d -m o::rx /home/$(whoami)/
