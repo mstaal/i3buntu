@@ -9,7 +9,7 @@ This project is for setting up a minimal Ubuntu installation with the i3 window 
 * the i3 window manager should be the default and only (preinstalled) window manager on the system. A number of customizations should be made in order for it to be both visually attractive and allow for productive workflows.
 
 
-#Requirements
+# Requirements
 * A version of Ubuntu Minimal (Ubuntu NetBoot). The latest version is to be located here: https://help.ubuntu.com/community/Installation/MinimalCD.
 * An internet connection.
 * A computer which supports the network drivers that come with the Ubuntu Minimal image.
@@ -19,11 +19,11 @@ The standard Ubuntu distribution comes preinstalled with a number of standard pa
 
 #Installation
 
-#####1. Download and install Ubuntu Minimal (NetBoot)
+##### 1. Download and install Ubuntu Minimal (NetBoot)
 
 A guide on how to construct a installation media (CD, DVD or USB key) can be found in the above link for Ubuntu Minimal. During installation, a `Software Selection` wizard will appear. One may choose to install whatever one wishes to include from this wizard. However, in my personal setup I have chosen to select `Manual package selection` and `standard system utilities` as the only selected options. When the base installation is done, one should see the Ubuntu Bash prompt.
 
-#####2. Download and prepare the i3buntu installation files
+##### 2. Download and prepare the i3buntu installation files
 
 Type the following in the Ubuntu Bash:
 ```
@@ -35,7 +35,7 @@ tar -xvzf master.tar.gz
 ```
 and hit `ENTER`. This will extract the installation package.
 
-#####3. Install i3buntu
+##### 3. Install i3buntu
 
 Now type the following in the terminal:
 ```
@@ -47,7 +47,7 @@ It is very important that you remember to include `sudo`. At some point you will
     reboot
 and hitting `ENTER`, the installation should be complete.
 
-#Feedback
+# Feedback
 The project continues to be a work in progress. Even though I constantly hope to have included everything necessary to make an optimal setup I often realize that perfections can be made. Anyone should feel absolutely free to come with suggestions on how to improve the project. One may (for instance!) suggest:
 * What packages to remove from `install.sh`. I may not know exactly what packages are redundant.
 * What packages to add to `install.sh`. Again, I may have missed something which can easen our lifes.
