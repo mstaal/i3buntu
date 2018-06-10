@@ -14,10 +14,10 @@ This project is for setting up a minimal Ubuntu installation with the i3 window 
 * An internet connection.
 * A computer which supports the network drivers that come with the Ubuntu Minimal image.
 
-#Default Ubuntu packages
+# Default Ubuntu packages
 The standard Ubuntu distribution comes preinstalled with a number of standard packages. This project tries to determine what packages allow for the desired Ubuntu setup to be made. As of this writing (July 15, 2016) the most recent version of Ubuntu is Ubuntu 16.04, and a complete list of all preinstalled packages is to be found in the following manifest file: http://releases.ubuntu.com/xenial/ubuntu-16.04-desktop-amd64.manifest.
 
-#Installation
+# Installation
 
 ##### 1. Download and install Ubuntu Minimal (NetBoot)
 
