@@ -17,6 +17,8 @@ This project is for setting up a minimal Ubuntu installation with the i3 window 
 # Default Ubuntu packages
 The standard Ubuntu distribution comes preinstalled with a number of standard packages. This project tries to determine what packages allow for the desired Ubuntu setup to be made. As of this writing (July 15, 2016) the most recent version of Ubuntu is Ubuntu 16.04, and a complete list of all preinstalled packages is to be found in the following manifest file: http://releases.ubuntu.com/xenial/ubuntu-16.04-desktop-amd64.manifest.
 
+> Note that Ubuntu 18.04 seems to be working. 
+
 # Installation
 
 ##### 1. Download and install Ubuntu Minimal (NetBoot)
@@ -43,8 +45,12 @@ cd i3buntu-master
 sudo chmod +x install.sh
 sudo ./install.sh
 ```
-It is very important that you remember to include `sudo`. At some point you will be prompted to type your user password. Do this and hit `ENTER`. After having done this, i3buntu will download, install and setup all relevant software and dependencies. When the setup is complete, you will again have access to the Ubuntu Bash. By typing
+It is very important that you remember to include `sudo`. At some point you will be prompted to type your user password. Do this and hit `ENTER`. After having done this, i3buntu will download, install and setup all relevant software and dependencies. When the setup is complete, you will again have access to the Ubuntu Bash. 
+
+By typing
+
     reboot
+
 and hitting `ENTER`, the installation should be complete.
 
 # Feedback
