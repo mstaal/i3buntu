@@ -41,9 +41,9 @@ Now type the following in the terminal:
 ```
 cd i3buntu-master
 sudo chmod +x install.sh
-sudo ./install.sh
+sudo -u=USERNAME ./install.sh
 ```
-It is very important that you remember to include `sudo`. At some point you will be prompted to type your user password. Do this and hit `ENTER`. After having done this, i3buntu will download, install and setup all relevant software and dependencies. When the setup is complete, you will again have access to the Ubuntu Bash. By typing
+where `USERNAME` should be the name of the current user. It is very important that you remember to include `sudo`. At some point you will be prompted to type your user password. Do this and hit `ENTER`. After having done this, i3buntu will download, install and setup all relevant software and dependencies. When the setup is complete, you will again have access to the Ubuntu Bash. By typing
     reboot
 and hitting `ENTER`, the installation should be complete.
 
